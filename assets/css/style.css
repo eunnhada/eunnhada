@@ -164,25 +164,11 @@ main {
   padding-right: 24px;
 }
 
-.hero-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  margin-bottom: 18px;
-}
-
 .hero-copy h1 {
   font-size: clamp(3rem, 7vw, 6.2rem);
   line-height: 0.96;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
-}
-
-.hero-korean {
-  font-size: 1.12rem;
-  color: var(--muted);
-  margin-bottom: 24px;
 }
 
 .hero-description {
@@ -403,49 +389,6 @@ main {
   font-weight: 600;
 }
 
-/* PROJECT */
-.project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.project-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  align-items: center;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--line);
-}
-
-.project-thumb {
-  min-height: 360px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.project-thumb img {
-  height: 100%;
-  transition: transform 0.45s ease;
-}
-
-.project-item:hover .project-thumb img {
-  transform: scale(1.04);
-}
-
-.project-content h3 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 10px 0 14px;
-}
-
-.project-content p:last-child {
-  color: #555;
-  line-height: 1.8;
-  max-width: 520px;
-}
-
 /* PROFILE ONLY PAGE */
 .profile-only {
   padding: 140px 80px 80px;
@@ -464,122 +407,7 @@ main {
   object-fit: cover;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1100px) {
-  .main-nav {
-    gap: 28px;
-  }
-
-  .hero-inner,
-  .section-head,
-  .profile-preview,
-  .portfolio-grid,
-  .portfolio-grid-3,
-  .media-preview-box,
-  .media-page-grid,
-  .project-item,
-  .wide-wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-copy {
-    padding-right: 0;
-  }
-
-  .hero-visual {
-    height: 60vh;
-    min-height: 420px;
-  }
-
-  .portfolio-card,
-  .portfolio-card.large {
-    min-height: 360px;
-  }
-
-  .project-thumb {
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .site-header {
-    padding: 18px 20px;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    background: rgba(245, 245, 242, 0.98);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  main {
-    padding-top: 84px;
-  }
-
-  .hero-section,
-  .preview-section,
-  .profile-only {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .hero-inner {
-    gap: 28px;
-    min-height: auto;
-  }
-
-  .hero-copy h1 {
-    font-size: 2.6rem;
-  }
-
-  .hero-description {
-    font-size: 0.94rem;
-  }
-
-  .hero-visual {
-    min-height: 320px;
-    height: 46vh;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-  }
-
-  .profile-row {
-    font-size: 0.9rem;
-    padding: 16px 6px;
-  }
-
-  .project-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .profile-only {
-    padding-top: 110px;
-    padding-bottom: 40px;
-  }
-}/* CONTACT PAGE */
+/* CONTACT PAGE */
 .contact-page {
   padding: 140px 80px 80px;
 }
@@ -638,21 +466,130 @@ main {
 }
 
 .contact-value {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: #333;
   word-break: break-word;
 }
 
+/* RESPONSIVE */
 @media (max-width: 1100px) {
-  .contact-grid {
+  .main-nav {
+    gap: 28px;
+  }
+
+  .hero-inner,
+  .section-head,
+  .profile-preview,
+  .portfolio-grid,
+  .portfolio-grid-3,
+  .media-preview-box,
+  .media-page-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding-right: 0;
+  }
+
+  .hero-visual {
+    height: 60vh;
+    min-height: 420px;
+  }
+
+  .portfolio-card,
+  .portfolio-card.large {
+    min-height: 360px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    padding: 18px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    background: rgba(245, 245, 242, 0.98);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  main {
+    padding-top: 84px;
+  }
+
+  .hero-section,
+  .preview-section,
+  .profile-only,
   .contact-page {
-    padding: 110px 20px 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-inner {
+    gap: 28px;
+    min-height: auto;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-description {
+    font-size: 0.94rem;
+  }
+
+  .hero-visual {
+    min-height: 320px;
+    height: 46vh;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .profile-row {
+    font-size: 0.9rem;
+    padding: 16px 6px;
+  }
+
+  .profile-only {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+
+  .contact-page {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-card {
