@@ -1,19 +1,14 @@
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
 
-if (menuToggle && mainNav) {
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-  });
-}
-
-const navLinks = document.querySelectorAll(".main-nav a");
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-navLinks.forEach((link) => {
-  const linkPage = link.getAttribute("href");
-
-  if (linkPage === currentPage) {
-    link.classList.add("active");
+  if (!menuToggle || !mainNav) {
+    console.log("menuToggle 또는 mainNav를 찾지 못함");
+    return;
   }
+
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("open");
+    console.log("menu clicked");
+  });
 });
